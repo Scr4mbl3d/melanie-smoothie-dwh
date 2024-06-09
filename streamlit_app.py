@@ -30,7 +30,7 @@ if ingredients_list:
             ingredients_string += each_fruit
         else:
             ingredients_string += ', '+  each_fruit
-        search_on = pd_df.iloc[pd_df['FRUIT_NAME'] == each_fruit, 'SEARCH_ON'].iloc[0
+        search_on = pd_df.iloc[pd_df['FRUIT_NAME'] == each_fruit, 'SEARCH_ON'].iloc[0]
         
         st.subheader(each_fruit+ 'Nutrition Information')
         fruityvice_response = requests.get("https://fruityvice.com/api/fruit/"+search_on)
